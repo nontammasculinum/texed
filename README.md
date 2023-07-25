@@ -14,13 +14,13 @@ You can open texed with the following command:
 
 ## Features
 Texed has very minimal features currently:
-  . cursor movement
-  . insert text
-  . append text
-  . replace text
-  . insertion of new lines
-  . deletion of lines/text
-  . saving of changes
+  * cursor movement
+  * insert text
+  * append text
+  * replace text
+  * insertion of new lines
+  * deletion of lines/text
+  * saving of changes
 
 ## DISCLAIMER
 Texed has only been tested on linux with wine, until further notice its functionality is questionable.
