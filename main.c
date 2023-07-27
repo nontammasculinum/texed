@@ -274,12 +274,12 @@ int sreplacestr(char **sub, char *x, int pos) {
 int squishstring(char **strs, int sz, const char delim, char **ret, int *rsz) {
 	*ret = calloc(1,1); *rsz = 1;
 	for(int i = 0; i < sz; i++) {
-		printf("%s", strs[i]);
 		*ret = realloc(*ret, *rsz + strlen(strs[i]) + 1);
 		*rsz += strlen(strs[i]) + 1;
 		strcat(*ret, strs[i]);
 		(*ret)[strlen(*ret)] = delim;
 	}
+	printf("\n%s\n", *ret);
 	return 0;
 }
 
@@ -305,6 +305,7 @@ int readfile(char **buff, int *buff_sz, char *path) {
 }
 
 int writefile(char *_buff, int _buff_sz, char *path) {
+	printf("\n%s\n", _buff);
 	FILE *fp = fopen(path, "w");
 	fwrite(_buff, 1, _buff_sz, fp);
 	fclose(fp);
